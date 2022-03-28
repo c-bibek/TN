@@ -1,0 +1,235 @@
+<HTML>
+<HEAD>
+<TITLE>Contact Us</TITLE>
+<HEAD>
+<STYLE type="text/css" rel="stylesheet">
+a:link{
+color:black;
+font-size:20px;
+text-decoration:none;
+}
+a:visited{
+color:Black;
+font-size:20px;
+text-decoration:none;
+}
+a:hover{
+color:red;
+font-size:20px;
+text-decoration:none;
+}
+a:active{
+color:black;
+font-size:20px;
+text-decoration:none;
+}
+</STYLE>
+<SCRIPT language="javascript" type="text/javascript">
+function date()
+{
+var now=new Date();
+var date=now.getDate();
+var month=now.getMonth()+1;
+var year=now.getFullYear();
+document.write("Date:");
+document.write(date+"/"+month+"/"+year);
+}
+</SCRIPT>
+
+<script type="text/javascript" language="javascript">
+function signin()
+{
+if(document.feedback.username.value=="")
+{
+window.alert("error.username is empty");
+return false;
+}
+else if(document.feedback.password.value=="")
+{
+window.alert("error.Please enter your password");
+return false;
+}
+else
+{
+return true;
+}
+}
+</script>
+<script type="text/javascript" language="javascript">
+			function checkForm() {
+
+				//checking name
+				if(document.contactForm.yourName.value=="") {
+					alert("Please type your name");
+					document.contactForm.yourName.focus();
+					return false;
+				}
+
+				//checking email
+				if(document.contactForm.yourEmail.value=="") {
+					alert("Please type your email");
+					document.contactForm.yourEmail.focus();
+					return false;
+				}
+
+				//checking tel
+				if(document.contactForm.yourTel.value=="") {
+					alert("Please type your tel");
+					document.contactForm.yourTel.focus();
+					return false;
+				}
+
+				//checking number
+				if(isNaN(document.contactForm.yourTel.value)) {
+					alert("Tel should be in Numbers.");
+					document.contactForm.yourTel.select();
+					return false;
+				}
+
+				//checking address
+				if(document.contactForm.yourAdd.value=="") {
+					alert("Please type your address");
+					document.contactForm.yourAdd.focus();
+					return false;
+				}
+
+				//checking msg
+				if(document.contactForm.msg.value=="") {
+					alert("Please type your message");
+					document.contactForm.msg.focus();
+					return false;
+				}
+			}
+		</script>
+
+</HEAD>
+<LINK href="qwe.css" style="text/css" rel="stylesheet">
+<BODY BGCOLOR="#001C54">
+<!--START PARENT TABLE 1-->
+<TABLE ALIGN="CENTER" BGCOLOR="#024357" WIDTH="1000PX" HEIGHT="80PX" CELLSPACING="0PX" CELLPADDING="0PX" BORDER="0PX">
+<TR>
+<TD>
+<TD WIDTH="1000PX" ALIGN="LEFT">
+<!--START CHILD TABLE 1-->
+<TABLE WIDTH="100%" background="pictures/para.jpg" HEIGHT="80PX" BORDER="0PX" CELLPADDING="0PX" CELLSPACONG="0PX">
+<TR>
+<TH WIDTH="20%"> 
+<form method="get" action="http://www.google.com/search">
+
+<input type="text"   name="q" size="20"
+ maxlength="255" value="" /><BR>
+<input type="submit" value="Search" />
+<br />
+
+</form>
+</TH>
+<TH WIDTH="60%"></TH>
+<TH WIDTH="20%"><IMG src="Pictures/nepal.gif" alt="Nepal" height="80px"></TH>
+</TR>
+</TABLE>
+<!--END CHILD TABLE 1-->
+<BR>
+<!--START CHILD TABLE 5-->
+<TABLE WIDTH="1000PX"   HEIGHT="30PX" BORDER="0PX" CELLPADDING="0PX">
+<TR>
+<TH WIDTH="400PX" ALIGN="LEFT">
+<font size="5px"  face="timora,times new roman">Official Web-site of Nepal</font><BR>
+<SCRIPT language="javascript" type="text/javascript">
+// call function date()
+date();
+</SCRIPT>
+</TH>
+<TH></TH>
+<TH align="right">
+<form name="feedback" action="process.html" onsubmit="return signin();">
+User Name:
+<input type="text" name="username">
+Password:
+<input type="text" name="password"><BR>
+<A href="sign up.html">Sign Up</A>
+<input type="submit" value="Sign in">
+
+</form>
+
+</TH>
+</TR>
+</TABLE>
+<!--END CHILD TABLE 5-->
+<!--START CHILD TABLE 2-->
+<TABLE WIDTH="100%"   HEIGHT="30PX" BORDER="1PX" CELLPADDING="0PX" >
+<TR>
+<TH WIDTH="150PX" ALIGN="CENTRE"><A href="index.html">Home</A></TH>
+<TH WIDTH="150PX" ALIGN="CENTER"><A href="gallery.html">Photo Gallery</A></TH>
+<TH WIDTH="150PX" ALIGN="CENTER"><A href="shop.html">shop</A></TH>
+<TH WIDTH="150PX" ALIGN="CENTER"><A href="aboutnepal.html">About Nepal</A></TH>
+
+
+</TR>
+</TABLE>
+<!--END CHILD TABLE 2-->
+<BR><BR>
+<TABLE WIDTH="800px"  BORDER="1PX" ALIGN="CENTER"CELLPADDING="0PX" >
+<TR><TH>
+					<h1>Contacts</h1>
+					<p><b>Anything you want to say us</b>,</br>
+					Note down our address:</p>
+					<p>
+						Jorpati-Kathmandu, Nepal
+					</p>
+					<p><b>Or,</b> simply leave a message for us:</p> 
+					<form name="contactForm" action="thank-you.html" method="post" onsubmit="return checkForm();">
+						<label for="yourName"> Name:</label>
+						<input type="text" name="yourName" size="50" class="textField" id="yourName" />
+					
+						<label for="yourEmail"> Email:</label>
+						<input type="text" name="yourEmail" size="50" class="textField" id="yourEmail" /><BR>
+
+						<label for="yourTel">Telephone:</label>
+						<input type="text"  name="yourTel" size="50" class="textField" id="yourTel" />
+
+						<label for="yourAdd"> Address:</label>
+						<input  type="text" name="yourAdd" size="50" class="textField" id="yourAdd" /><BR>
+
+						<label for="msg">Type Message:</label>
+						<textarea name="msg" id="msg" rows="5" cols="60"></textarea>
+						<input type="submit" value="Send" class="formButton"/>
+					</form>
+				</TH>
+			<TR>
+				<TH>
+			
+					<p>Copyright: 2011, CPG103 - Informatics College, Site by:Bibek Chaulagain, 1801T3100135</p>
+				</TH>
+			</TR>
+
+		</table>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
